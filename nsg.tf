@@ -1,4 +1,4 @@
-resource "azurerm_network_security_group" "nsg" {
+resource "azurerm_network_security_group" "vnet" {
   count               = var.enabled && var.nsg_enabled ? 1 : 0
   name                = "${var.name}-vnet-nsg"
   location            = var.location
